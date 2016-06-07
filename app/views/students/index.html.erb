@@ -1,0 +1,41 @@
+
+<% @students.each do |student| %>
+	<h3><%= student.Name %></h3>
+	<%= link_to "Profile", student %>
+<% end %>
+
+<div id="displayTable">
+	<table border="1px solid red" align="center" class="InnerTable">
+		<tr>
+			<th>Name </th>
+			<th>Height </th>
+			<th>Weight </th>
+			<th>GPA </th>
+			<th>Color </th>
+		</tr>
+			<% @students.each do |student| %>
+			<tr>
+				<td><%= student.Name %> </td>
+				<td><%= student.Height %> </td>
+				<td><%= student.Weight %> </td>
+				<td><%= student.GPA %> </td>
+				<td><%= student.Color %> </td>
+			</tr>
+		<% end %>
+	</table>
+</div>
+
+<div id="displayResult" style="vertical-align: text-bottom">
+	<% @students.each do |p| %>
+
+	<div class="displayResult1" style=" vertical-align: text-bottom;width: <%=p.Weight %>px; Height:<%= p.Height %>px; display: inline-block; border:1px solid #000;">
+		<p style="color: <%= p.Color %>; text-align:center"> <%= p.Name %></p>
+		<p style="text-align: center"> <%= p.GPA %></p>
+	</div>
+
+	<% end %>
+</div>
+
+
+
+

@@ -1,0 +1,12 @@
+<h1> <%= @student.Name %></h1>
+
+<div>
+	<%= @student.Height %>
+	<%= @student.Weight %>
+	<%= @student.Color %>
+	<%= @student.GPA %>
+</div>
+<br>
+
+<%= link_to 'EDIT', edit_student_path(@student) %>
+<%= link_to 'DELETE', student_path(@student), method: :delete, data: {confirm: "Are you sure you want to DELETE your student information?"} %>
